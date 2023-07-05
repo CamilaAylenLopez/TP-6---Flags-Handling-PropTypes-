@@ -7,6 +7,8 @@ const Juego = (props) => {
     bandera: null,
     nombre: null,
   }])
+  const {bandera, nombre} = Bandera;
+
   const [BanderaActual, setBanderaActual] = useState(0)
   const [puntos, setPuntos] = useState(0)
   //const [timer, setTimer] = useState(0)
@@ -62,6 +64,10 @@ const Juego = (props) => {
       </form>
     </>
   )
+}
+
+Juego.propTypes = {
+  Bandera: BanderaShape.isRequired
 }
 
 export default Juego
