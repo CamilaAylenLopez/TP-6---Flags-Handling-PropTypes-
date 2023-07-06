@@ -1,8 +1,10 @@
 import './juego.css'
 import React, { Fragment, useState, useEffect } from "react"
 import { Button, InputGroup, Form, Image } from 'react-bootstrap'
+import { BanderaShape } from "../shapes";
 
-const Juego = (props) => {
+
+const Juego = ({ juego }) => {
   const [Bandera, setBandera] = useState([{
     bandera: null,
     nombre: null,
@@ -67,7 +69,7 @@ const Juego = (props) => {
 }
 
 Juego.propTypes = {
-  Bandera: BanderaShape.isRequired
+  juego: BanderaShape.isRequired
 }
 
 export default Juego
